@@ -17,11 +17,12 @@ fn add (numbers []int) int {
 }
 
 fn factorial (number int) int {
-	mut number_copy := number
-	if number_copy > 1 {
-		number_copy *= factorial(number_copy - 1)
-	}
-	return number_copy
+  if number > 1 {
+    return number * factorial(number - 1)
+  }
+  else {
+	  return number
+  }
 }
 
 fn main () {
