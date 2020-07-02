@@ -17,15 +17,11 @@ fn add (numbers []int) int {
 }
 
 fn factorial (number int) int {
-	mut factorial_num := 1
-	
-	for i := 1; i < number + 1; i++ {
-		factorial_num *= i
+	mut number_copy := number
+	if number_copy > 1 {
+		number_copy *= factorial(number_copy - 1)
 	}
-
-
-	return factorial_num
-
+	return number_copy
 }
 
 fn main () {
