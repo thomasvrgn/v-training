@@ -21,6 +21,10 @@ fn remove_prefix (message string, prefix string) {
 
 }
 
+fn add_value (mut array []string, value string) {
+	*array << value
+}
+
 fn main () {
 
 	text := "Hello i'm Ness"
@@ -29,5 +33,10 @@ fn main () {
 	welcome(["Ness", "MC", "15"])
 
 	remove_prefix("t!help", "t!")
-	
+
+	names := ["Ness", "Sparkot"]
+	add_value(mut &names, "coucou")
+
+	println(names)
+
 }
